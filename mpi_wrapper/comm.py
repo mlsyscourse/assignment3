@@ -29,7 +29,6 @@ class Communicator(object):
         self.comm.Allgather(src_array, dest_array)
 
     def Reduce_scatter(self, src_array, dest_array, op=MPI.SUM):
-        assert op is not None
         src_array_byte = src_array.itemsize * src_array.size
         dest_array_byte = dest_array.itemsize * dest_array.size
         self.total_bytes_transferred += src_array_byte * (self.comm.Get_size() - 1)
