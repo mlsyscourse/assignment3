@@ -118,7 +118,7 @@ For instance, for `mp_size=2, dp_size=4` on 8 nodes we will group the nodes as s
 <img src="figs/group.png" alt="image" width="350" height="auto">
 </p>
 
-### Part 1. Data Split for Data Parallel Training 
+### Part 1. Data Split for Data Parallel Training (10 pts)
 
 For this part, your task is to implement the `split_train` function in `data/data_parallel_preprocess.py`.
 
@@ -139,7 +139,7 @@ To test your implementation, please run
 python3 -m pytest -l -v tests/test_data_split.py
 ```
 
-### Part 2. Layer Initialization 
+### Part 2. Layer Initialization (20 pts)
 
 In this part, your task is to get necessary information for model and data parallel training, which is then
 used to initialize the corresponding layers in your model.
@@ -185,7 +185,7 @@ To test your implementation, please run
 mpirun -n 8 python3 -m pytest -l -v --with-mpi tests/test_get_info.py
 ```
 
-### Part 3. Naive Model Parallel Forward Communication
+### Part 3. Naive Model Parallel Forward Communication (15 pts)
 
 <p align="center">
 <img src="figs/naive_forward.png" alt="image" width="450" height="auto">
@@ -201,7 +201,7 @@ To test your implementations, please run
 mpirun -n 4 python3 -m pytest -l -v --with-mpi tests/test_naive_mp_forward.py
 ```
 
-### Part 4. Megatron-Style Model Parallel Forward Communication
+### Part 4. Megatron-Style Model Parallel Forward Communication (15 pts)
 
 <p align="center">
 <img src="figs/megatron_forward.png" alt="image" width="450" height="auto">
@@ -216,7 +216,7 @@ To test your implementations, please run
 mpirun -n 4 python3 -m pytest -l -v --with-mpi tests/test_megatron_mp_forward.py
 ```
 
-### Part 5. Naive Model Parallel Backward Communication
+### Part 5. Naive Model Parallel Backward Communication (20 pts)
 
 In this part your task is to implement the backward communications in FC2 for 
 the naive model parallel. You need to implement the `naive_collect_backward_output` and `naive_collect_backward_x` 
@@ -231,7 +231,7 @@ To test your implementations, please run
 mpirun -n 4 python3 -m pytest -l -v --with-mpi tests/test_naive_mp_backward.py
 ```
 
-### Part 6. Megatron-Style Model Parallel Backward Communication
+### Part 6. Megatron-Style Model Parallel Backward Communication (10 pts)
 
 Similarly, in this part your task is to implement the backward communications in FC2 for 
 the megatron-style model parallel. You need to implement the `megatron_collect_backward_output` and `megatron_collect_backward_x` 
@@ -245,7 +245,8 @@ To test your implementations, please run
 mpirun -n 4 python3 -m pytest -l -v --with-mpi tests/test_megatron_mp_backward.py
 ```
 
-### Part 7. Gradients Communication for Data Parallel Training
+### Part 7. Gradients Communication for Data Parallel Training (10 pts)
+
 For data parallel training, each data parallel group will run its forward and backward pass
 independently and aggregate the gradients afterwards for weight update. 
 
@@ -259,6 +260,7 @@ mpirun -n 4 python3 -m pytest -l -v --with-mpi tests/test_collect_weight_grad.py
 ```
 
 ### Part 8. Unified Training
+
 Now that you have implemented all required communication functions for model/data parallel training.
 The actual training can be tested by running:
 
@@ -277,6 +279,7 @@ For megatron-style model parallel, you can set `mp_size=1, 2, 4, 8`.
 The maximum `num_nodes` you can set is 8. Now you can try different combinations and check out the logged training information.
 
 ### How to Submit Your Homework (Important!)
+
 We will be using the auto-grading feature in autolab to score your submission for this assignment, so please follow the instructions 
 carefully to align with the auto-grader hand-in requirements.
 
