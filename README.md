@@ -1,4 +1,4 @@
-# Assignment3 
+# Assignment 3 
 In this assignment, we will explore how to implement the communication protocols for *Data Parallel* and 
 *Tensor Model Parallel* training from scratch using Message Passing Interface ([MPI](https://mpi4py.readthedocs.io/en/stable/))
 and NumPy.
@@ -20,7 +20,7 @@ ssh [andrew_id]@ghc[X].ghc.andrew.cmu.edu
 Then you should clone this repo and setup your virtual environment:
 
 ```bash
-git clone <url for this repo>
+git clone https://github.com/mlsyscourse/assignment3.git
 cd assignment3
 pip install virtualenv
 python3 -m venv work_space

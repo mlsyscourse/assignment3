@@ -35,10 +35,10 @@ def get_info(
             A boolean indicating whether we are using Megatron-style Model Parallel or not
 
         in_dim : int
-            An integer corresponds to the original input dimension
+            An integer corresponds to the original input feature dimension
 
         out_dim : int
-            An integer corresponds to the original output dimension
+            An integer corresponds to the original output feature dimension
 
     Returns
     -------
@@ -55,10 +55,10 @@ def get_info(
             The Data Parallel communicator after split
 
         part_in_dim : int
-            An integer corresponds to the input dimension after specific parallelism
+            An integer corresponds to the input feature dimension after specific parallelism
 
         part_out_dim : int
-            An integer corresponds to the output dimension after specific parallelism
+            An integer corresponds to the output feature dimension after specific parallelism
     """
 
     """TODO: Your code here"""
