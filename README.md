@@ -182,7 +182,7 @@ for more information and hints.
 
 To test your implementation, please run
 ```bash
-mpirun -n 4 python3 -m pytest -l -v --with-mpi tests/test_get_info.py
+mpirun -n 8 python3 -m pytest -l -v --with-mpi tests/test_get_info.py
 ```
 
 ### Part 3. Naive Model Parallel Forward Communication
