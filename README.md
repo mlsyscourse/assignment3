@@ -39,7 +39,7 @@ source work_space/bin/activate
 You are not required to use the same `[X]`. In case some nodes are in maintenance, please
 switch to some other nodes.
 
-You are not required to use the GHC machines as long as your preferred platform contains MPI support.
+You are not required to use the GHC machines as long as your preferred platform contains MPI support with at least 8 cores.
 
 ### Part 0. Warm-up
 
