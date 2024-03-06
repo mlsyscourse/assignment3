@@ -278,6 +278,9 @@ For megatron-style model parallel, you can set `mp_size=1, 2, 4, 8`.
 
 The maximum `num_nodes` you can set is 8. Now you can try different combinations and check out the logged training information.
 
+Note that we will not grade this part, but we highly recommend you to try different configurations to get a better understanding of
+different approaches in terms of communication/peak-memory trade-offs in distributed training.
+
 ### How to Submit Your Homework (Important!)
 
 We will be using the auto-grading feature in autolab to score your submission for this assignment, so please follow the instructions 
