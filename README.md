@@ -288,7 +288,11 @@ Now in your assignment3 root directory run
 make handin.tar
 ```
 Then you will see a `handin.tar` file under your root directory, please go to Autolab at [15-442](https://autolab.andrew.cmu.edu/courses/15442-s24) (https://autolab.andrew.cmu.edu/courses/15442-s24) and submit the file handin.tar 
-under assignment3.
+under Homework-3. You should be able to see your score afterwards (you might need to wait for some time to let the autograder 
+run your code.)
+
+The maximum total score for this assignment is 100 pts and we will use this score as your final score for assignment 3. There is no limit on the
+number of submissions.
 
 
 #### References 
