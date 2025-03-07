@@ -281,21 +281,55 @@ The maximum `num_nodes` you can set is 8. Now you can try different combinations
 Note that we will not grade this part, but we highly recommend you to try different configurations to get a better understanding of
 different approaches in terms of communication/peak-memory trade-offs in distributed training.
 
+## Assignment Feedback (0 pt)
+
+This is the second time we offer this course, and we appreciate any assignment feedback from you.
+You can leave your feedback (if any) in `feedback.txt`, and submit it together with the source code.
+Possible choices can be:
+
+- How difficult do you think this assignment is?
+- How much time does the assignment take? Which task takes the most time?
+- Which part of the assignment do you feel hard to understand?
+- And any other things you would like to share.
+
+Your feedback will be very useful in helping us improve the assignment quality
+for next years.
+
+
 ### How to Submit Your Homework (Important!)
 
-We will be using the auto-grading feature in autolab to score your submission for this assignment, so please follow the instructions 
+We will be using the auto-grading feature in GradeScope to score your submission for this assignment, so please follow the instructions 
 carefully to align with the auto-grader hand-in requirements.
 
 Now in your assignment3 root directory run
 ```bash
-make handin.tar
+zip -j handin.zip model/func_impl.py data/data_parallel_preprocess.py feedback.txt
 ```
-Then you will see a `handin.tar` file under your root directory, please go to Autolab at [15-442](https://autolab.andrew.cmu.edu/courses/15442-s24) (https://autolab.andrew.cmu.edu/courses/15442-s24) and submit the file handin.tar 
-under Homework-3. You should be able to see your score afterwards (you might need to wait for some time to let the autograder 
-run your code.)
+This will create a zip file with `func_impl.py`, `data_parallel_preprocess.py` and `feedback.txt`.
+You can check the contents of `handin.zip` with 
+```bash
+zipinfo -1 handin.zip
+```
 
-The maximum total score for this assignment is 100 pts and we will use this score as your final score for assignment 3. There is no limit on the
-number of submissions.
+to make sure it contains all the needed files:
+
+It is expected to list the three files:
+```
+func_impl.py
+data_parallel_preprocess.py
+feedback.txt
+```
+
+Then, please go to GradeScope at https://www.gradescope.com/courses/951055 and submit the file `handin.zip` to Assignment 3.
+
+You can submit multiple times, and the time stamp of that submission will be used in determining any late penalties.
+Please make sure that your submitted `func_impl.py` and `data_parallel_preprocess.py` are placed at the root level of the zip file (i.e., they are not in any sub-folder),
+or **otherwise the autograder may not process your submission properly**.
+
+**Any attempt to manipulate or compromise the integrity of the autograder will result in severe penalties.**
+
+
+If you are enrolled in the course (on SIO), but not registered on Gradescope, please let the course staff know in a private post on Piazza.
 
 
 #### References 
