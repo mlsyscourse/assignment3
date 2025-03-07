@@ -66,7 +66,7 @@ Note that these four MPI functions are the only functions that are required and 
 <img src="figs/allreduce.png" alt="image" width="450" height="auto">
 </p>
 
-You can see an all-reduce example by running:
+You can see an all-reduce (op=min) example by running:
 ```bash
 mpirun -n 8 python mpi-test.py --test_case allreduce
 ```
